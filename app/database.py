@@ -1,6 +1,9 @@
 import sqlite3
+from dotenv import load_dotenv
+import os
 
-DB_NAME = "users.db"
+load_dotenv()
+DB_NAME = os.getenv("DB_NAME")
 sql = """
         CREATE TABLE users (
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,

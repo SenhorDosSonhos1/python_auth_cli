@@ -11,7 +11,8 @@ class User:
         self.password = password
         self.confirm_password = confirm_password
         self.created_at = datetime.now()
-    @classmethod
+
+    @staticmethod
     def _verify_user_exist(email):
         with get_connection() as conn:
             cursor = conn.cursor()
